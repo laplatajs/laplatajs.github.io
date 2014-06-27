@@ -45,7 +45,7 @@ body
   left: 0
   right: 0
   bottom: 0
-  overflow-y: scroll
+  overflow-y: hidden
   overflow-x: hidden
   padding: 0
   margin: 0
@@ -125,6 +125,7 @@ h1
   display: inline-block
   width: 90%
   height: 100%
+  min-height: 100%
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4)
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4)
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4)
@@ -185,6 +186,7 @@ nav
 
 footer
   position: absolute
+  display: block
   bottom: 0
   width: 100%
   z-index: 2
@@ -207,8 +209,9 @@ footer span
   nav
     width: 42.5%
 
-
 @media all and (max-width: 680px)
+  body
+    overflow-y: scroll
 
   .sidearea
     width: 100%
@@ -255,3 +258,16 @@ footer span
     right: 0
     margin-bottom: 0
     text-align: center
+
+@media all and (max-width : 568px)
+    body
+      overflow-y: scroll
+
+    .title h1, .title h2
+      display: none
+      visibility: hidden
+
+    .sidearea .logo
+      display: block
+      left: 20%
+      text-align: center
