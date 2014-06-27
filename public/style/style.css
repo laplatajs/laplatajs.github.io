@@ -1,0 +1,257 @@
+/**
+ * La Plata JS stylesheet
+ */
+/** Fonts **/
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300+|Rosario");
+@font-face {
+  font-family: 'typicon';
+  src: url("../vendor/typicons/src/font/typicon.eot");
+  src: url("../vendor/typicons/src/font/typicon.eot?#iefix") format('embedded-opentype'), url("../vendor/typicons/src/font/typicon.woff") format('woff'), url("../vendor/typicons/src/font/typicon.ttf") format('truetype'), url("../vendor/typicons/src/font/typicon.svg#typicon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/** General Reset Rules **/
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+body {
+  font-size: 100%;
+  font-family: 'Rosario', sans-serif;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+/** Desktop First **/
+/** Display **/
+.sideimage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("https://farm6.staticflickr.com/5269/5691089545_490036810d_b.jpg") no-repeat fixed 0 0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 7em;
+  vertical-align: middle;
+}
+.item {
+  display: table;
+  width: 100%;
+  height: 100px;
+  padding: 2px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60);
+  margin-bottom: 5px;
+  text-align: center;
+  background-color: #fff;
+}
+.tw span,
+.tw p {
+  color: #00aced;
+}
+.fb span,
+.fb p {
+  color: #3b5998;
+}
+.gg span,
+.gg p {
+  color: #dd4b39;
+}
+.fn span,
+.fn p {
+  color: #d98719;
+}
+.sponsors span,
+.sponsors p {
+  color: #228b22;
+}
+.item h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+.item span {
+  font-size: 42px;
+}
+/** Positioning **/
+.sidearea {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  height: 100%;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  z-index: 1;
+  text-align: right;
+}
+.sidearea .logo {
+  position: absolute;
+  top: 20%;
+  right: 1%;
+  background-image: url("../images/logo.png");
+  -webkit-background-size: 200px 200px;
+  -moz-background-size: 200px 200px;
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  padding-right: 1.5%;
+  z-index: 2;
+}
+.sidearea small {
+  position: absolute;
+  top: 45%;
+  right: 1%;
+  width: 200px;
+  height: 30%;
+  text-align: center;
+  z-index: 2;
+  font-weight: bold;
+}
+.title {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  width: 10%;
+  height: 100%;
+  text-align: left;
+}
+.title h1 {
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  color: #f3df49;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+.title h2 {
+  position: absolute;
+  top: 32%;
+  left: 7%;
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+nav {
+  position: absolute;
+  top: 20%;
+  left: 3%;
+  width: 30%;
+  z-index: 2;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+  left: 3%;
+  text-align: left;
+}
+footer span {
+  color: #f3df49;
+  font-size: 42px;
+}
+/** Overwrite some rules for small devices **/
+@media all and (min-width: 681px) and (max-width: 1344px) {
+  .sidearea {
+    width: 83%;
+  }
+  .title {
+    width: 17%;
+  }
+  nav {
+    width: 42.5%;
+  }
+}
+@media all and (max-width: 680px) {
+  .sidearea {
+    width: 100%;
+  }
+  .title {
+    width: 0%;
+  }
+  .title h1 {
+    top: 6%;
+    left: -150px;
+  }
+  .title h2 {
+    top: 18%;
+    left: -150px;
+  }
+  .sidearea .logo {
+    top: 3%;
+    left: 10%;
+  }
+  .sidearea small {
+    top: 28%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+  nav {
+    top: 35%;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  .item {
+    display: block;
+    font-size: 1em;
+  }
+  .tw,
+  .fb,
+  .gg,
+  .fn,
+  .sponsors {
+    margin-left: 0;
+  }
+  footer {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}

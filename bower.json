@@ -1,0 +1,25 @@
+{
+  "name": "laplatajs.github.io",
+  "version": "0.0.1",
+  "homepage": "https://github.com/laplatajs/laplatajs.github.io",
+  "authors": [
+    "Diego Paez <paez.di@gmail.com>"
+  ],
+  "description": "La Plata JS Meetups Official Site",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "adaptive.background": "~1.0.1",
+    "jQuery": "~2.1.1",
+    "normalize.css": "~3.0.1",
+    "typicons": "~2.0.4"
+  }
+}

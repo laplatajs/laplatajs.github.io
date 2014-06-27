@@ -1,0 +1,60 @@
+doctype html
+html(lang="es")
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1')
+    title= pageTitle
+    meta(content="yellow", name="apple-mobile-web-app-status-bar-style")
+    meta(content="JS Meetups", property="og:title")
+    meta(content="La Plata, Argentina - JavaScript Meetups", property="og:description")
+    meta(content="website", property="og:type")
+    meta(content="http://laplatajs.github.io", property="og:url")
+    link(rel='stylesheet', href='public/vendor/normalize.css')
+    link(rel='stylesheet', href='public/style/style.css')
+    link(rel='stylesheet' href='public/vendor/typicons/src/font/typicons.min.css')
+
+  body
+    div.sidearea
+      div.logo
+      small GRUPO DE DESARROLLADORES JAVASCRIPT
+      div(data-adaptive-background='1', data-ab-css-background='1', data-ab-parent='body').sideimage
+
+    div.title
+      h1 JS
+      h2 LA PLATA
+
+    nav
+      div.item.tw
+        a(href='https://twitter.com/LaPlataJS')
+          span.typcn.typcn-social-twitter
+          p Seguí a la comunidad en Twitter @laplatajs
+
+      div.item.fb
+        a(href='https://www.facebook.com/groups/laplatajs/')
+          span.typcn.typcn-social-facebook
+          p Compartí la experiencia de cada meetup en Facebook
+
+      div.item.gg
+        a(href='https://groups.google.com/forum/#!forum/laplatajs')
+          span.typcn.typcn-group
+          p Intercambia ideas o buscá ayuda en los grupos de la comunidad.
+
+      div.item.fn
+        span.typcn.typcn-keyboard
+        p Chateá con otros pares en el canal de IRC en Freenode
+        p #laplatajs
+
+      div.item.sponsors
+        a(href='#')
+          span.typcn.typcn-heart-outline
+          p ¿Estas interesado en patrocinar la próxima meetup?
+
+
+    footer
+      span.typcn.typcn-beer
+      h3 Hecho por la Comunidad "La Plata JS".
+      small Establecida en mayo de 2014.
+
+    script(src='public/vendor/jQuery/dist/jquery.min.js')
+    script(src='public/vendor/adaptive.background/src/jquery.adaptive-backgrounds.js')
+    script(src='public/js/meetups-lp.js')
