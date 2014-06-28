@@ -1,4 +1,6 @@
 laplatajs.github.io
 ===================
 
-Website for LaPlataJS
+LaPlataJS's official site.
+
+_Established in May, 2014_
