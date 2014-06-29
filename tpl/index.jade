@@ -16,32 +16,39 @@ html(lang="es")
   body
 
     div.sidearea
-      img.logo(src='public/images/logo.png', alt='Logo de comunidad de desarrolladores JavaScript de la ciudad de La Plata, Argentina.')
-      small GRUPO DE DESARROLLADORES JAVASCRIPT
+      div.logo
+        img(src='public/images/logo.png', alt='Logo de comunidad de desarrolladores JavaScript de la ciudad de La Plata, Argentina.')
+        small GRUPO DE DESARROLLADORES JAVASCRIPT
+
       div(data-adaptive-background='1', data-ab-css-background='1', data-ab-parent='body').sideimage
       nav(role='tablist')
+        div.item.nf(role='tab')
+          a(target="_blank", href='http://bit.ly/laplatajs2', role='tabpanel', 'tabindex'='1')
+            span.typcn.typcn-bell
+            p La próxima meetup es el viernes 04/07. Inscribite!
+
         div.item.tw(role='tab')
-          a(href='https://twitter.com/LaPlataJS', role='tabpanel', tabindex='1')
+          a(target="_blank", href='https://twitter.com/LaPlataJS', role='tabpanel', tabindex='2')
             span.typcn.typcn-social-twitter
             p Seguí a la comunidad @laplatajs
 
         div.item.fb(role='tab')
-          a(href='https://www.facebook.com/groups/laplatajs/', role='tabpanel', tabindex='2')
+          a(target="_blank", href='https://www.facebook.com/groups/laplatajs/', role='tabpanel', tabindex='3')
             span.typcn.typcn-social-facebook
             p Compartí la experiencia de cada meetup.
 
         div.item.gg(role='tab')
-          a(href='https://groups.google.com/forum/#!forum/laplatajs', role='tabpanel', tabindex='3')
+          a(target="_blank", href='https://groups.google.com/forum/#!forum/laplatajs', role='tabpanel', tabindex='4')
             span.typcn.typcn-group
             p Intercambia ideas o buscá ayuda en el grupo de la comunidad.
 
         div.item.fn(role='tab')
           span.typcn.typcn-keyboard
-          p(tabindex='4') Chateá con otros pares en Freenode.
-          strong #laplatajs
+          p(tabindex='5') Chateá con otros pares en Freenode.
+            strong  #laplatajs
 
         div.item.sponsors(role='tab')
-          a(target="_blank", href='http://bit.ly/1pBypov', role='tabpanel', tabindex='5')
+          a(target="_blank", href='http://bit.ly/1pBypov', role='tabpanel', tabindex='6')
             span.typcn.typcn-heart-outline
             p ¿Estas interesado en patrocinar la próxima meetup?
       span
