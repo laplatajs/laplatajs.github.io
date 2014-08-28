@@ -43,10 +43,10 @@ body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  background-color: #636067;
   color: #fff;
   width: 100%;
   height: 100%;
+  background-color: #636067;
 }
 a {
   text-decoration: none;
@@ -57,15 +57,6 @@ a {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url("https://farm6.staticflickr.com/5269/5691089545_490036810d_b.jpg") no-repeat 0 0 fixed;
-  -webkit-background-size: auto 100%;
-  -moz-background-size: auto 100%;
-  background-size: auto 100%;
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
-  filter: blur(2px);
 }
 h1 {
   font-family: 'Open Sans', sans-serif;
@@ -129,13 +120,28 @@ h1 {
   position: relative;
   display: inline-block;
   width: 90%;
-  height: 100%;
+  min-height: 100%;
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.4);
   -moz-box-shadow: 0 5px 10px rgba(0,0,0,0.4);
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.4);
   box-shadow: 0 5px 10px rgba(0,0,0,0.4);
   z-index: 1;
   text-align: right;
+}
+.sidearea:after {
+  width: 100%;
+  height: 100%;
+  background: url("https://farm6.staticflickr.com/5269/5691089545_490036810d_b.jpg") no-repeat 0 0 fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  margin: -20px;
+  z-index: 2;
 }
 .sidearea .logo {
   position: absolute;

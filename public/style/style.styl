@@ -6,7 +6,6 @@
 /** Fonts **/
 
 @import url(http://fonts.googleapis.com/css?family=Source\+Sans\+Pro)
-//@import url(http://fonts.googleapis.com/css?family=Open\+Sans:300)
 @import url(http://fonts.googleapis.com/css?family=Open\+Sans:300\+\|Rosario)
 
 @font-face
@@ -48,10 +47,10 @@ body
   overflow-x: hidden
   padding: 0
   margin: 0
-  background-color: rgb(99, 96, 103)
   color: rgb(255, 255, 255)
   width: 100%
   height: 100%
+  background-color: rgb(99, 96, 103)
 
 a
   text-decoration:none
@@ -65,14 +64,7 @@ a
   position: relative
   width: 100%
   height: 100%
-  background: url('https://farm6.staticflickr.com/5269/5691089545_490036810d_b.jpg') no-repeat 0 0 fixed
-  //background-size: cover
-  background-size: auto 100%
-  -webkit-filter: blur(2px)
-  -moz-filter: blur(2px)
-  -o-filter: blur(2px)
-  -ms-filter: blur(2px)
-  filter: blur(2px)
+
 
 h1
   font-family: 'Open Sans', sans-serif
@@ -137,13 +129,26 @@ h1
   position: relative
   display: inline-block
   width: 90%
-  height: 100%
-  //min-height: 100%
+  //height: 100%
+  min-height: 100%
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4)
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4)
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4)
   z-index: 1
   text-align: right
+
+.sidearea:after
+  width: 100%
+  height: 100%
+  background: url('https://farm6.staticflickr.com/5269/5691089545_490036810d_b.jpg') no-repeat 0 0 fixed
+  background-size: cover
+  -webkit-filter: blur(10px)
+  -moz-filter: blur(10px)
+  -o-filter: blur(10px)
+  -ms-filter: blur(10px)
+  filter: blur(10px)
+  margin: -20px
+  z-index: 2
 
 .sidearea .logo
   position: absolute
