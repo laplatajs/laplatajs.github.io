@@ -1,0 +1,56 @@
+/* NAVIGATION */
+
+nav {
+  background-color: #f60;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+nav ul {
+  margin-bottom: 0;
+}
+
+nav a,
+nav a:hover,
+nav a:visited {
+  color: #fff;
+  text-decoration: none;
+  line-height: 30px;
+}
+
+nav ul{
+  max-width: 720px;
+  padding: 15px 0;
+  margin: 0 auto;
+  height: auto;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 16px;
+  padding-bottom: 5px;
+  padding-right: 20px;
+  text-transform: uppercase;
+}
+
+nav .first{
+  padding-left: 0;
+  text-transform: none;
+}
+
+nav .current {
+
+}
+
+nav .logo {
+  background: url("../images/logo.png") no-repeat scroll 0px 0px / 30px auto transparent;
+  padding-left: 32px;
+  display: inline-block;
+  height: 30px;
+
+}
+
+nav .badge {
+  position: relative;
+  top: -0.5em;
+  font-size: 75%;
+}

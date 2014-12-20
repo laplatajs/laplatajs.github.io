@@ -1,0 +1,84 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "variables",
+        "icon",
+        "base",
+        "navigation",
+        "footer"
+;
+
+
+/**
+ * Main
+ */
+
+.header {
+    h1 {
+        font-size: 92px; font-weight: 600;
+        text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    }
+    h2 {
+        font-size: 70px; font-weight: 300; letter-spacing: 20px;
+        text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+    }
+    h1, h2 { margin: 0; line-height: 1; color: #fff}
+    
+    .logo {
+        font-size: 190px;
+        text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+    
+    height: 420px;
+    padding-top: 50px;
+    background: url("/resources/images/lpjs-2.jpg") no-repeat center center;
+    background-size: cover;
+    //text-align: center;
+}
+
+article.wide {
+    min-height: 300px;
+    padding-top: 50px;
+
+    &.comunidad {
+        padding-top: 0;
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            font-weight: 300;
+        }
+        strong {
+            font-weight: 600;
+        }
+
+    }
+}
+
+
+section {
+    .title {
+        font-size: 32px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+        
+        p {
+            display: inline-block;
+            padding: 10px 30px;
+            border-bottom: 1px solid black;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    }
+    .content {
+        margin: 80px 0px;
+    }
+}
+

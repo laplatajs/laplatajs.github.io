@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  
+  {% include head.html section="main" %}
+
+  <body>
+    
+    <main role="main" class="page-content main">
+      {% include navigation.html %}
+      
+      <article class="header">
+        <section class="wrapper">
+          {{ content }}
+        </section>
+      </article>
+
+      {% for post in site.categories.main reversed %}
+
+      <article class="wide {% cycle 'odd', 'even' %} {{ post.cls }}">
+        <section class="wrapper">
+          {% if post.showTitle != false %}
+          <div class="title">
+            <!-- <div class="boxed"> -->
+              {{ post.title | markdownify }}
+<!--             {% assign words = post.title | split:&nbsp; %}
+            {% for word in words %}
+              <span class="{% cycle 'light', 'bold' %}">{{word}}</span>
+            {% endfor %}
+ -->          
+            <!-- </div> -->
+          </div>
+          {% endif %}
+          <div class="content">
+          {{post.content}}
+          </div>
+        </section>
+      </article>
+
+      {% endfor %}      
+
+    </main>
+    {% include footer.html %}
+  </body>
+
+</html>
