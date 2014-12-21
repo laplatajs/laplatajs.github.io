@@ -42,6 +42,18 @@ article.wide {
     .location {
         font-weight: 600;
     }
+    .speakers {
+        display: inline;
+    }
+    .repo {
+        display: inline;
+        a,
+        a:hover,
+        a:visited {
+          color: #999;
+          text-decoration: none;      
+        }
+    }
 
 }
 
