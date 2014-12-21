@@ -1,6 +1,7 @@
 /* FOOTER */
 
 footer {
+  color: #fff;
   background-color: #232323;
   border-bottom: 1px solid #f1f1f1;
   min-height: 200px;
@@ -26,12 +27,12 @@ footer ul{
 }
 
 footer li {
-  color: #fff;
   display: inline-block;
   font-size: 16px;
   padding-bottom: 5px;
   padding-right: 20px;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 
 footer .first{
@@ -44,5 +45,16 @@ footer .logo {
   padding-left: 32px;
   display: inline-block;
   height: 30px;
+}
 
+footer .icon- {
+  font-size: 24px;
+}
+
+footer .message {
+  font-weight: 300;
+  font-size: 14px;
+  .icon- {
+    font-size: 14px;
+  }
 }

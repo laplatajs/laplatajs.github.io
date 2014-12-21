@@ -20,8 +20,8 @@
         <section class="wrapper meetup">
           <div class="index">#{{ forloop.length | minus: forloop.index0 }}.</div>
           <div class="title">{{ post.title }}</div>
-          <span class="date">{{ post.date | date_to_string }}</span> / 
-          <span class="location"> {{post.location}} </span>
+          <span class="date">{{ post.date | date_to_string }}</span>
+          <span class="icon-">&#xe947;</span><span class="location"> {{post.location}} </span>
           <div class="content">
           {{post.content}}
           {% assign post_date = post.date | date: "%D" %}
@@ -35,13 +35,20 @@
               <div class="speakers">{{talk.speakers}}</div>
               {% if talk.repository %}
               <div class="repo">
-                <a href="http://github.com/{{site.github_username}}/{{talk.repository}}" target="_blank">
+                <a href="http://github.com/{{site.github_username}}/{{talk.repository}}" target="_blank" title="Repositorio" >
                   <span class="icon- github">&#xeab1;</span>
                 </a>
               </div>
               {% endif %}
+              {% if talk.video %}
+              <div class="repo">
+                <a href="{{talk.video}}" target="_blank" title="Video">
+                  <span class="icon-">&#xe912;</span>
+                </a>
+              </div>
+              {% endif %}
             </div>
-            {% endif %}
+            {% endif %} 
           {% endfor%}
           </div>
         </section>
