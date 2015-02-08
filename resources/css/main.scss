@@ -12,12 +12,17 @@
         "footer"
 ;
 
-
 /**
  * Main
  */
 
 .header {
+    height: 420px;
+    padding-top: 50px;
+    background: url("/resources/images/lpjs-2.jpg") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+
     h1 {
         font-size: 92px; font-weight: 600;
         text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
@@ -26,19 +31,23 @@
         font-size: 70px; font-weight: 300; letter-spacing: 20px;
         text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
     }
-    h1, h2 { margin: 0; line-height: 1; color: #fff}
-    
+    h1, h2 {
+        margin: 0; line-height: 1; color: #fff
+    }
+
     .logo {
         font-size: 190px;
         text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
         color: #fff;
     }
-    
-    height: 420px;
-    padding-top: 50px;
-    background: url("/resources/images/lpjs-2.jpg") no-repeat center center;
-    background-size: cover;
-    //text-align: center;
+
+    @include tablet {
+        text-align: left;
+    }
+
+    @include desktop {
+        text-align: left;
+    }
 }
 
 article.wide {
@@ -59,6 +68,21 @@ article.wide {
     }
 }
 
+@include tablet{
+    .content-cols article:not(:first-child) {
+
+        width: 49%;
+        display: inline-block;
+    }
+}
+
+@include desktop {
+    .content-cols article:not(:first-child) {
+
+        width: 49%;
+        display: inline-block;
+    }
+}
 
 section {
     .title {
@@ -66,7 +90,7 @@ section {
         text-align: center;
         text-transform: uppercase;
         font-weight: 300;
-        
+
         p {
             display: inline-block;
             padding: 10px 30px;
@@ -79,6 +103,8 @@ section {
     }
     .content {
         margin: 80px 0px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 

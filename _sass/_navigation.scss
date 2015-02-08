@@ -3,6 +3,7 @@
 nav {
   background-color: #f60;
   border-bottom: 1px solid #f1f1f1;
+  text-align: center;
 }
 
 nav ul {
@@ -18,40 +19,80 @@ nav a:visited {
 }
 
 nav ul{
-  max-width: 720px;
   padding: 15px 0;
   margin: 0 auto;
   height: auto;
+  width: 100%;
+  margin: 0;
+
+  @include desktop {
+    display: inline-block;
+    width: 80%;
+    text-align: right;
+  }
 }
 
 nav li {
-  display: inline-block;
+  display: block;
   font-size: 16px;
   padding-bottom: 5px;
-  padding-right: 20px;
+  padding-right: 5px;
   text-transform: uppercase;
   vertical-align: middle;
+  text-align: center;
+
+  @include desktop {
+    display: inline-block;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    text-align: initial;
+  }
 }
 
 nav .first{
   padding-left: 0;
   text-transform: none;
+  font-size: 16px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  text-align: center;
+  display: block;
+  width: 100%;
+
+  @include desktop {
+    width: 19%;
+    display: inline-block;
+    text-align: initial;
+    padding-bottom: 5px;
+    margin: 0;
+
+    a {
+      padding-left: 30px;
+    }
+  }
 }
 
 nav .current {
-
+  color: inherit;
+  text-decoration: underline;
 }
 
 nav .logo {
   background: url("../images/logo.png") no-repeat scroll 0px 0px / 30px auto transparent;
-  padding-left: 32px;
+  //padding-left: 32px;
   display: inline-block;
   height: 30px;
-
+  width: 30px;
+  vertical-align: middle;
+  margin-left: -30px;
 }
 
 nav .badge {
   position: relative;
   top: -0.5em;
   font-size: 75%;
+}
+
+ul.wrapper {
+  text-align: right;
 }

@@ -17,16 +17,42 @@
     background-color: #f1f1f1;
     min-height: 250px;
     padding-top: 50px;
+    text-align: center;
+
+    .logo {
+        font-size: 190px;
+        text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+        color: black;
+
+        @include tablet {
+            display: inline-block;
+        }
+
+        @include desktop {
+            display: inline-block;
+        }
+
+    }
 
     h1 {
-        font-size: 92px; 
-        font-weight: 300;       
+        font-size: 92px;
+        font-weight: 300;
+    }
+
+    @include tablet {
+        text-align: left;
+    }
+
+    @include desktop {
+        text-align: left;
     }
 }
 
 article.wide {
     min-height: 250px;
     padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .meetup {
@@ -52,7 +78,7 @@ article.wide {
         a:hover,
         a:visited {
           color: #999;
-          text-decoration: none;      
+          text-decoration: none;
         }
     }
 
