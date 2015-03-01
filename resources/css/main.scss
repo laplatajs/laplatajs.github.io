@@ -24,30 +24,44 @@
     text-align: center;
 
     h1 {
-        font-size: 92px; font-weight: 600;
+        font-size: 65px; font-weight: 600;
         text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
     }
     h2 {
-        font-size: 70px; font-weight: 300; letter-spacing: 20px;
+        font-size: 20px; font-weight: 300; letter-spacing: 17px;
         text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
     }
     h1, h2 {
-        margin: 0; line-height: 1; color: #fff
+        margin: 0; line-height: 1; color: #fff;
     }
 
     .logo {
-        font-size: 190px;
+        font-size: 100px;
         text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
-        color: #fff;
+        color: #fff;        
+    }
+    
+    .header-main {
+        text-align: center;
     }
 
-    @include tablet {
-        text-align: left;
+    .header-main > div {
+        display: inline-block;
     }
 
-    @include desktop {
-        text-align: left;
+    .site-comunidad {
+        color: #FFF;
+        text-align: center;
+        font-size: 42px;
+        text-shadow: 0px 1px 8px rgba(0, 0, 0, 1);
+        font-weight: 300;
+        padding: 30px;
+
+        strong {
+            font-weight: 800;
+        }
     }
+
 }
 
 article.wide {
@@ -65,22 +79,6 @@ article.wide {
             font-weight: 600;
         }
 
-    }
-}
-
-@include tablet{
-    .content-cols article:not(:first-child) {
-
-        width: 49%;
-        display: inline-block;
-    }
-}
-
-@include desktop {
-    .content-cols article:not(:first-child) {
-
-        width: 49%;
-        display: inline-block;
     }
 }
 

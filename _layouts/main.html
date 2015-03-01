@@ -14,7 +14,7 @@
         </section>
       </article>
 
-      <div class="content-cols">
+      <!-- <div class="content-cols"> -->
         {% for post in site.categories.main reversed %}
         <article class="wide {% cycle 'odd', 'even' %} {{ post.cls }}">
           <section class="wrapper">
@@ -36,7 +36,7 @@
           </section>
         </article>
         {% endfor %}
-      </div>
+      <!-- </div> -->
     </main>
     {% include footer.html %}
   </body>
