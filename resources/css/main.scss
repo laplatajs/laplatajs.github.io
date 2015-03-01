@@ -78,8 +78,20 @@ article.wide {
         strong {
             font-weight: 600;
         }
-
     }
+}
+
+article.cols {
+    section {        
+        @include desktop {
+            float: left;
+            // 2 cols
+            max-width: -webkit-calc(#{$desktop-width} / 2 - (#{$spacing-unit} * 2));
+            max-width:         calc(#{$desktop-width} / 2 - (#{$spacing-unit} * 2));            
+        }
+    }
+    
+
 }
 
 section {

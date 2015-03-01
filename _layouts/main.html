@@ -13,30 +13,24 @@
           {{ content }}
         </section>
       </article>
-
-      <!-- <div class="content-cols"> -->
+      <article class="wide cols">
+        <div class="wrapper"> 
+        <!-- {% cycle 'odd', 'even' %}  -->
         {% for post in site.categories.main reversed %}
-        <article class="wide {% cycle 'odd', 'even' %} {{ post.cls }}">
-          <section class="wrapper">
+          <section class="{{ post.cls }}">
             {% if post.showTitle != false %}
             <div class="title">
-              <!-- <div class="boxed"> -->
                 {{ post.title | markdownify }}
-  <!--             {% assign words = post.title | split:&nbsp; %}
-              {% for word in words %}
-                <span class="{% cycle 'light', 'bold' %}">{{word}}</span>
-              {% endfor %}
-   -->
-              <!-- </div> -->
             </div>
             {% endif %}
             <div class="content">
             {{post.content}}
             </div>
           </section>
-        </article>
+        
         {% endfor %}
-      <!-- </div> -->
+        </div>
+      </article>
     </main>
     {% include footer.html %}
   </body>
