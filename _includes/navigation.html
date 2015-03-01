@@ -1,12 +1,14 @@
 
 <nav>
   <div class="wrapper">
-    <span class="first {% if page.url == '/index.html' %} current {%endif%}">
-      <a href="/"><span class="logo"> </span>
-      <span>{{ site.name }}</span>
-      </a>
-    </span>
-    <ul class="">
+    <ul class="first">
+      <li class=" {% if page.url == '/index.html' %} current {%endif%}">
+        <a href="/"><span class="logo"> </span>
+        <span>{{ site.name }}</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="sections">
       <li class="{% if page.url contains  '/meetups' %} current {%endif%}">
         <a href="/meetups">Meetups <span class="badge">{{ site.categories.meetups.size }}</span></a>
       </li>

@@ -17,14 +17,11 @@ footer a:visited {
 }
 
 footer ul {
-  // height: auto;
-  // display: inline-block;
   padding: 10px 0;
   margin: 0;
 }
 
 footer li {
-  // float: left;
   display: inline-block;
   list-style: none;
   font-size: 16px;
@@ -37,55 +34,6 @@ footer li {
 footer li:last-child {
   padding-right: 0;
 }
-
-// footer > div {
-//   padding: 15px;
-//   text-align: center;
-//   margin: 0;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
-// @include tablet {
-//   footer > div {
-//     width: 49%;
-//     box-sizing: border-box;
-//     display: inline-block;
-//   }
-
-//   footer > div:first-child{
-//     padding-left: 0;
-//     text-transform: none;
-//     text-align: left;
-//     padding: 15px;
-//   }
-
-//   footer > div:last-child {
-//     text-align: right;
-//     padding-left: 15px;
-//   }
-// }
-
-// @include desktop {
-//   footer > div {
-//     width: 49%;
-//     box-sizing: border-box;
-//     display: inline-block;
-//   }
-
-//   footer > div:first-child {
-//     padding-left: 0;
-//     text-transform: none;
-//     text-align: left;
-//     padding: 15px;
-//   }
-
-//   footer > div:last-child {
-//     text-align: right;
-//     padding-left: 15px;
-//   }
-// }
-
 
 
 footer .logo {

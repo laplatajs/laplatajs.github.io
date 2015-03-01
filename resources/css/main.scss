@@ -17,19 +17,26 @@
  */
 
 .header {
-    height: 420px;
     padding-top: 50px;
     background: url("/resources/images/lpjs-2.jpg") no-repeat center center;
     background-size: cover;
     text-align: center;
 
     h1 {
-        font-size: 65px; font-weight: 600;
+        font-size: 65px; 
+        font-weight: 600;
         text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+        @include mobile {
+            font-size: 42px;
+        }
     }
     h2 {
         font-size: 20px; font-weight: 300; letter-spacing: 17px;
         text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+        @include mobile {
+            font-size: 12px;
+        }
+
     }
     h1, h2 {
         margin: 0; line-height: 1; color: #fff;
@@ -38,7 +45,10 @@
     .logo {
         font-size: 100px;
         text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
-        color: #fff;        
+        color: #fff;
+        @include mobile {
+            font-size: 70px;
+        }
     }
     
     .header-main {
@@ -52,10 +62,14 @@
     .site-comunidad {
         color: #FFF;
         text-align: center;
-        font-size: 42px;
+        font-size: 42px;        
         text-shadow: 0px 1px 8px rgba(0, 0, 0, 1);
         font-weight: 300;
         padding: 30px;
+        
+        @include mobile {
+            font-size: 20px;
+        }
 
         strong {
             font-weight: 800;
@@ -82,7 +96,7 @@ article.wide {
 }
 
 article.cols {
-    section {        
+    section {
         @include desktop {
             float: left;
             // 2 cols
@@ -90,8 +104,6 @@ article.cols {
             max-width:         calc(#{$desktop-width} / 2 - (#{$spacing-unit} * 2));            
         }
     }
-    
-
 }
 
 section {

@@ -6,10 +6,6 @@ nav {
   text-align: center;
 }
 
-nav ul {
-  margin-bottom: 0;
-}
-
 nav a,
 nav a:hover,
 nav a:visited {
@@ -18,73 +14,51 @@ nav a:visited {
   line-height: 30px;
 }
 
-nav ul{
+nav ul {
   padding: 15px 0;
   margin: 0 auto;
-  height: auto;
-  width: 100%;
-  margin: 0;
 
-  @include desktop {
-    display: inline-block;
-    width: 80%;
-    text-align: right;
+  &.first {
+    float: left;
   }
+
+  float: right;
 }
 
 nav li {
-  display: block;
-  font-size: 16px;
+  display: inline-block;
   padding-bottom: 5px;
-  padding-right: 5px;
+  padding-right: 20px;
+  font-size: 16px;
   text-transform: uppercase;
   vertical-align: middle;
-  text-align: center;
-
-  @include desktop {
-    display: inline-block;
-    padding-bottom: 5px;
-    padding-right: 20px;
-    text-align: initial;
-  }
 }
 
-nav .first{
+nav .first {
   padding-left: 0;
   text-transform: none;
   font-size: 16px;
   padding-bottom: 5px;
   padding-right: 5px;
   text-align: center;
-  display: block;
-  width: 100%;
+}
 
-  @include desktop {
-    width: 19%;
-    display: inline-block;
-    text-align: initial;
-    padding-bottom: 5px;
-    margin: 0;
-
-    a {
-      padding-left: 30px;
-    }
+nav .sections {
+  @include mobile {
+    display: none;
   }
 }
 
 nav .current {
   color: inherit;
-  //text-decoration: underline;
 }
 
 nav .logo {
   background: url("../images/logo.png") no-repeat scroll 0px 0px / 30px auto transparent;
-  //padding-left: 32px;
   display: inline-block;
   height: 30px;
   width: 30px;
-  vertical-align: middle;
-  margin-left: -30px;
+  vertical-align: middle;  
 }
 
 nav .badge {
