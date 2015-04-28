@@ -18,18 +18,19 @@
     min-height: 250px;
     padding-top: 50px;
     text-align: center;
+    @include mobile {
+        min-height: 150px;
+    }
 
     .logo {
-        font-size: 190px;
-        text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+        font-size: 120px;
         color: black;
+        display: inline-block;
+        vertical-align: top;
 
-        @include tablet {
-            display: inline-block;
-        }
+        @include mobile {
+            font-size: 90px;
 
-        @include desktop {
-            display: inline-block;
         }
 
     }
@@ -37,14 +38,10 @@
     h1 {
         font-size: 92px;
         font-weight: 300;
-    }
-
-    @include tablet {
-        text-align: left;
-    }
-
-    @include desktop {
-        text-align: left;
+        display: inline-block;
+        @include mobile {
+            font-size: 60px;
+        }
     }
 }
 
@@ -53,15 +50,23 @@ article.wide {
     padding-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
+
 }
 
 .meetup {
     .index {
         font-size: 40px;
         color: #f60;
+        @include mobile {
+            font-size: 30px;
+        }
     }
     .title {
         font-size: 38px;
+        @include mobile {
+            font-size: 24px;
+        }
+
     }
     .date {
         font-weight: 300;
@@ -88,6 +93,9 @@ article.wide {
     padding-left: 50px;
     .title {
         font-size: 32px;
+        @include mobile {
+            font-size: 24px;
+        }
     }
     .speakers {
         font-weight: 300;

@@ -31,22 +31,26 @@
             <div class="talk">
               <div class="title">
                 {{talk.title}}
+                {% if talk.repository %}
+                <div class="repo">
+                  <a href="http://github.com/{{site.github_username}}/{{talk.repository}}" target="_blank" title="Repositorio" >
+                    <span class="icon- github">&#xeab1;</span>
+                  </a>
+                </div>
+                {% endif %}
+                {% if talk.video %}
+                <div class="repo">
+                  <a href="{{talk.video}}" target="_blank" title="Video">
+                    <span class="icon-">&#xe912;</span>
+                  </a>
+                </div>
+                {% endif %}
               </div>
-              <div class="speakers">{{talk.speakers}}</div>
-              {% if talk.repository %}
-              <div class="repo">
-                <a href="http://github.com/{{site.github_username}}/{{talk.repository}}" target="_blank" title="Repositorio" >
-                  <span class="icon- github">&#xeab1;</span>
-                </a>
+
+              <div class="speakers">
+                {{talk.speakers}}
               </div>
-              {% endif %}
-              {% if talk.video %}
-              <div class="repo">
-                <a href="{{talk.video}}" target="_blank" title="Video">
-                  <span class="icon-">&#xe912;</span>
-                </a>
-              </div>
-              {% endif %}
+              
             </div>
             {% endif %} 
           {% endfor%}
