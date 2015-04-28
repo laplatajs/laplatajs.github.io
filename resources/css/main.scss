@@ -99,7 +99,7 @@ article.wide {
 article.cols {
     section {
         @include desktop {
-            float: left;
+            display: inline-block;
             // 2 cols
             max-width: -webkit-calc(#{$desktop-width} / 2 - (#{$spacing-unit} * 2));
             max-width:         calc(#{$desktop-width} / 2 - (#{$spacing-unit} * 2));            
@@ -108,6 +108,7 @@ article.cols {
 }
 
 section {
+    text-align: justify;
     .title {
         font-size: 32px;
         text-align: center;

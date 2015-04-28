@@ -54,6 +54,10 @@ article.wide {
 }
 
 .meetup {
+    &.wrapper {
+        text-align: left;
+    }
+
     .index {
         font-size: 40px;
         color: #f60;

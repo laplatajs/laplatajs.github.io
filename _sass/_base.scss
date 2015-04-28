@@ -158,7 +158,7 @@ pre {
     @extend %clearfix;
     margin-right: auto;
     margin-left: auto;
-    text-align: justify;
+    text-align: center;
 
     @include desktop{
         max-width: -webkit-calc(#{$desktop-width} - (#{$spacing-unit} * 2));
