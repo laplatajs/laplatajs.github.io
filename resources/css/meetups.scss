@@ -25,12 +25,10 @@
     .logo {
         font-size: 120px;
         color: black;
-        display: inline-block;
-        vertical-align: top;
+        vertical-align: middle;
 
         @include mobile {
             font-size: 90px;
-
         }
 
     }
@@ -38,7 +36,7 @@
     h1 {
         font-size: 92px;
         font-weight: 300;
-        display: inline-block;
+
         @include mobile {
             font-size: 60px;
         }
