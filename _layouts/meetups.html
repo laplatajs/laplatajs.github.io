@@ -18,10 +18,12 @@
 
       <article class="wide">
         <section class="wrapper meetup">
-          <div class="index">#{{ forloop.length | minus: forloop.index0 }}.</div>
-          <div class="title">{{ post.title }}</div>
-          <span class="date">{{ post.date | date_to_string }}</span>
-          <span class="icon-">&#xe947;</span><span class="location"> {{post.location}} </span>
+          <span class="index">#{{ forloop.length | minus: forloop.index0 }}.</span>
+          <span class="title">{{ post.title }}</span>
+          <div>
+            <span class="date">{{ post.date | date_to_string }}</span>
+            <span class="icon-">&#xe947;</span><span class="location"> {{post.location}} </span>
+          </div>
           <div class="content">
           {{post.content}}
           {% assign post_date = post.date | date: "%D" %}

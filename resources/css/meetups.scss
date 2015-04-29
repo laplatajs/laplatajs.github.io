@@ -48,7 +48,9 @@ article.wide {
     padding-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
-
+    &:last-child {
+        padding-bottom: 50px;
+    }
 }
 
 .meetup {
