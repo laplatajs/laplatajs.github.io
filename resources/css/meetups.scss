@@ -89,6 +89,14 @@ article.wide {
           color: #999;
           text-decoration: none;
         }
+
+        .icon- {
+            color: $brand-color;
+            font-size: 24px;
+            @include mobile {
+                font-size: 20px;
+            }
+        }
     }
 
 }
