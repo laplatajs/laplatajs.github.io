@@ -9,6 +9,8 @@ twitter_username: laplatajs
 github_username:  laplatajs
 facebook_group: laplatajs
 gplus: 107431169588797814323
+slack_team: laplatajs
+slack_join: https://laplatajs.herokuapp.com/
 
 # Build settings
 markdown: kramdown

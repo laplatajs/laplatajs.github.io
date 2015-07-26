@@ -1,6 +1,6 @@
 ---
-title:  Tercer Encuentro
+title:  Sexto Encuentro - 1er Aniversario
+date:   2015-05-21
 categories: meetups
-date:   2014-09-05
 location: Facultad de Inform&aacute;tica (UNLP)
 ---
