@@ -13,8 +13,57 @@
           {{ content }}
         </section>
       </article>
+      {% for announce in site.categories.announce %}
+      {% if announce.showAnnounce %}
+      <article class="cols announcement">
+        <div class="wrapper">
+
+          <section>
+            <div class="title">
+              <span class="icon- bell">&#xe600;</span>{{ announce.title | markdownify }}
+            </div>
+            {% if announce.subject %}
+            <h3>{{ announce.subject }}</h3>
+            {% endif %}
+            <div class="content">
+              <div class="wrapper">
+                <div class="date">
+                  <span>Fecha:</span> {{ announce.date | date: "%D" }}
+                </div> -
+                <div class="where">
+                  <span>Lugar:</span> {{ announce.location }}
+                </div>
+              </div>
+              <div class="talk">
+                <div class="talk-title">
+                  {{ announce.talks1 }}
+                </div>
+
+                <div class="speakers">
+                  {{ announce.speakers1 }}
+                </div>
+              </div>
+              {% if announce.talks2 %}
+              <div class="talk">
+                <div class="talk-title">
+                  {{ announce.talks2 }}
+                </div>
+
+                <div class="speakers">
+                  {{ announce.speakers2 }}
+                </div>
+              </div>
+              {% endif %}
+
+            </div>
+          </section>
+
+        </div>
+      </article>
+      {% endif %}
+      {% endfor %}
       <article class="wide cols">
-        <div class="wrapper"> 
+        <div class="wrapper">
         <!-- {% cycle 'odd', 'even' %}  -->
         {% for post in site.categories.main reversed %}
           <section class="{{ post.cls }}">
@@ -27,7 +76,7 @@
             {{post.content}}
             </div>
           </section>
-        
+
         {% endfor %}
         </div>
       </article>
