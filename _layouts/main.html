@@ -28,7 +28,7 @@
             <div class="content">
               <div class="wrapper">
                 <div class="date">
-                  <span>Fecha:</span> {{ announce.date | date: "%D" }}
+                  <span>Fecha:</span> {{ announce.date | "date: "%-d/%-m/%Y "" }}
                 </div> -
                 <div class="where">
                   <span>Lugar:</span> {{ announce.location }}
