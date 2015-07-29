@@ -1,0 +1,16 @@
+# Site settings
+name: LaPlataJS
+
+email: js.meetups.lp@gmail.com
+
+#url: "http://yourdomain.com" # the base hostname & protocol for your site
+
+twitter_username: laplatajs
+github_username:  laplatajs
+facebook_group: laplatajs
+gplus: 107431169588797814323
+slack_team: laplatajs
+slack_join: https://laplatajs.herokuapp.com/
+
+# Build settings
+markdown: kramdown

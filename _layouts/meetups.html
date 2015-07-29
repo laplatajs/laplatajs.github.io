@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  
+  {% include head.html section="meetups" %}
+
+  <body>
+    
+    <main role="main" class="page-content meetups">
+      {% include navigation.html %}
+      
+      <article class="header">
+        <section class="wrapper">
+          {{ content }}
+        </section>
+      </article>
+
+      {% for post in site.categories.meetups %}
+
+      <article class="wide">
+        <section class="wrapper meetup">
+          <span class="index">#{{ forloop.length | minus: forloop.index0 }}.</span>
+          <span class="title">{{ post.title }}</span>
+          <div>
+            <span class="date">{{ post.date | date_to_string }}</span>
+            <span class="icon-">&#xe947;</span><span class="location"> {{post.location}} </span>
+          </div>
+          <div class="content">
+          {{post.content}}
+          {% assign post_date = post.date | date: "%D" %}
+          {% for talk in site.categories.talks reversed %}
+            {% assign talk_date = talk.date | date: "%D" %}
+            {% if talk_date == post_date %}
+            <div class="talk">
+              <div class="title">
+                {{talk.title}}
+                {% if talk.repository %}
+                <div class="repo">
+                  <a href="http://github.com/{{site.github_username}}/{{talk.repository}}" target="_blank" title="Repositorio" >
+                    <span class="icon- github">&#xeab1;</span>
+                  </a>
+                </div>
+                {% endif %}
+                {% if talk.video %}
+                <div class="repo">
+                  <a href="{{talk.video}}" target="_blank" title="Video">
+                    <span class="icon-">&#xe912;</span>
+                  </a>
+                </div>
+                {% endif %}
+              </div>
+
+              <div class="speakers">
+                {{talk.speakers}}
+              </div>
+              
+            </div>
+            {% endif %} 
+          {% endfor%}
+          </div>
+        </section>
+      </article>
+
+      {% endfor %}      
+
+    </main>
+    {% include footer.html %}
+  </body>
+
+</html>
