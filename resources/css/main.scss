@@ -23,7 +23,7 @@
     text-align: center;
 
     h1 {
-        font-size: 65px; 
+        font-size: 65px;
         font-weight: 600;
         text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
         @include mobile {
@@ -50,7 +50,7 @@
             font-size: 70px;
         }
     }
-    
+
     .header-main {
         text-align: center;
         margin: 40px;
@@ -63,11 +63,11 @@
     .site-comunidad {
         color: #FFF;
         text-align: center;
-        font-size: 40px;        
+        font-size: 40px;
         // text-shadow: 0px 1px 8px rgba(0, 0, 0, 1);
         font-weight: 300;
         padding: 30px;
-        
+
         @include mobile {
             font-size: 20px;
         }
@@ -81,7 +81,7 @@
 
 article.wide {
     min-height: 300px;
-    padding: 150px 0;
+    padding: 100px 0;
 
     &.comunidad {
         padding-top: 0;
@@ -96,13 +96,55 @@ article.wide {
     }
 }
 
+article.announcement {
+  padding: 25px 0;
+
+  h3 {
+      text-align: center;
+      font-style: italic;
+      color: $grey-color;
+  }
+
+  .date, .where {
+      font-weight: 300;
+      font-size: 18px;
+      text-align: center;
+      display: inline;
+      height: 30px;
+      span {
+        font-weight: 600;
+      }
+  }
+
+  .content {
+      margin: 40px 0px;
+  }
+  .talk-title {
+    font-size: 38px;
+    @include mobile {
+        font-size: 24px;
+        text-align: center;
+    }
+    text-align: left;
+  }
+
+  .speakers {
+      display: inline;
+      @include mobile {
+          display: block;
+          text-align: center;
+      }
+  }
+
+}
+
 article.cols {
     section {
         @include desktop {
             display: inline-block;
             // 2 cols
             max-width: -webkit-calc(#{$desktop-width} / 2 - (#{$spacing-unit} * 2));
-            max-width:         calc(#{$desktop-width} / 2 - (#{$spacing-unit} * 2));            
+            max-width:         calc(#{$desktop-width} / 2 - (#{$spacing-unit} * 2));
         }
     }
 }
@@ -132,4 +174,3 @@ section {
         padding-right: 20px;
     }
 }
-
