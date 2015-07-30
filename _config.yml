@@ -11,6 +11,7 @@ facebook_group: laplatajs
 gplus: 107431169588797814323
 slack_team: laplatajs
 slack_join: https://laplatajs.herokuapp.com/
+irc: irc://chat.freenode.net/laplatajs
 
 # Build settings
 markdown: kramdown
