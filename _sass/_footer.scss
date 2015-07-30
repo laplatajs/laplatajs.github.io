@@ -50,11 +50,26 @@ footer .logo {
 
 footer .social {
   padding-top:20px;
+
+  @include mobile{
+    text-align: center;
+  }
+}
+
+footer .social li.first {
+  @include mobile{
+    width: 100%;
+  }
 }
 
 footer .icon- {
   font-size: 24px;
   color: $brand-color;
+}
+
+footer .icon-.irc a {
+  font-size: 30px;
+  line-height: 1px;
 }
 
 footer .message {
@@ -64,4 +79,3 @@ footer .message {
     font-size: 14px;
   }
 }
-
