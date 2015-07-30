@@ -13,55 +13,56 @@
           {{ content }}
         </section>
       </article>
-      {% for announce in site.categories.announce %}
-      {% if announce.showAnnounce %}
+
+      {% for announce in site.categories.meetups%}
+      {% if announce.current == true %}
       <article class="cols announcement">
         <div class="wrapper">
 
           <section>
             <div class="title">
-              <span class="icon- bell">&#xe601;</span>{{ announce.title | markdownify }}
+              <span class="icon- bell">&#xe601;</span>
+              <p> Nueva Meetup</p>
             </div>
-            {% if announce.subject %}
-            <h3>{{ announce.subject }}</h3>
-            {% endif %}
+            <h3> {{ announce.title | markdownify }}</h3>
+
             <div class="content">
-              <div class="wrapper">
-                <div class="date">
-                  <span>Fecha:</span> {{ announce.date | "date: "%-d/%-m/%Y "" }}
-                </div> -
-                <div class="where">
-                  <span>Lugar:</span> {{ announce.location }}
-                </div>
+              <div class="date">
+                <span>Fecha:</span> {{ announce.date | "date: "%-d/%-m/%Y "" }}
+              </div> -
+              <div class="where">
+                <span>Lugar:</span> {{ announce.location }}
               </div>
+              {% assign post_date = announce.date | date: "%D" %}
+              {% for talk in site.categories.talks reversed %}
+                {% assign talk_date = talk.date | date: "%D" %}
+                {% if talk_date == post_date %}
               <div class="talk">
                 <div class="talk-title">
-                  {{ announce.talks1 }}
+                  {{ talk.title }}
                 </div>
 
                 <div class="speakers">
-                  {{ announce.speakers1 }}
+                  {{ talk.speakers }}
                 </div>
               </div>
-              {% if announce.talks2 %}
-              <div class="talk">
-                <div class="talk-title">
-                  {{ announce.talks2 }}
-                </div>
-
-                <div class="speakers">
-                  {{ announce.speakers2 }}
-                </div>
-              </div>
-              {% endif %}
-
+                {% endif%}
+              {% endfor %}
             </div>
+
+            {% if announce.signup %}
+            <div class="signup">
+              <a class="button" href="{{announcement.form}}" target="_blank"> Anotate Ya! </a>
+            </div>
+            {% endif %}
           </section>
 
         </div>
       </article>
+
       {% endif %}
       {% endfor %}
+
       <article class="wide cols">
         <div class="wrapper">
         <!-- {% cycle 'odd', 'even' %}  -->
