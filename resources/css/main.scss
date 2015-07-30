@@ -97,7 +97,7 @@ article.wide {
 }
 
 article.announcement {
-  padding: 25px 0;
+  padding: 100px 0 0 0;
 
   h3 {
       text-align: center;
@@ -118,24 +118,33 @@ article.announcement {
 
   .content {
       margin: 40px 0px;
+      text-align: center;
   }
   .talk-title {
     font-size: 38px;
     @include mobile {
         font-size: 24px;
-        text-align: center;
     }
-    text-align: left;
+    text-align: center;
   }
 
   .speakers {
-      display: inline;
-      @include mobile {
-          display: block;
-          text-align: center;
-      }
+    text-align: center;
   }
 
+  .signup {
+    text-align: center;
+    a, 
+    a:hover, 
+    a:visited {
+      background: $brand-color;
+      color: white;
+      margin: 40px;
+      padding: 20px 100px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  }
 }
 
 article.cols {
