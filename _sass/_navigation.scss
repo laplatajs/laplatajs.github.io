@@ -35,7 +35,7 @@ nav li {
 
   &:last-child {
     padding-right: 0px;
-  }
+  }  
 }
 
 nav .first {
@@ -45,6 +45,10 @@ nav .first {
   padding-bottom: 5px;
   padding-right: 5px;
   text-align: center;
+}
+
+nav .site-name {
+  font-size: 18px;
 }
 
 nav .sections {
