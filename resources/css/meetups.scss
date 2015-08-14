@@ -60,7 +60,7 @@ article.wide {
 
     .index {
         font-size: 40px;
-        color: #f60;
+        color: $brand-color;
         @include mobile {
             font-size: 30px;
         }
@@ -91,7 +91,7 @@ article.wide {
         }
 
         .icon- {
-            color: $brand-color;
+            color: $green-color;
             font-size: 24px;
             @include mobile {
                 font-size: 20px;
