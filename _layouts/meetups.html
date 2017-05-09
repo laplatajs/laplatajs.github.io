@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-  
+
   {% include head.html section="meetups" %}
 
   <body>
-    
+
     <main role="main" class="page-content meetups">
       {% include navigation.html %}
-      
+
       <article class="header">
         <section class="wrapper">
           {{ content }}
@@ -34,7 +34,13 @@
                 {{talk.title}}
                 {% if talk.repository %}
                 <div class="repo">
-                  <a href="http://github.com/{{site.github_username}}/{{talk.repository}}" target="_blank" title="Repositorio" >
+                  <a href="
+                  {% if talk.repository contains 'github.com' %}
+                    {{talk.repository}}
+                  {% else %}
+                    http://github.com/{{site.github_username}}/{{talk.repository}}
+                  {% endif %}
+                  " target="_blank" title="Repositorio" >
                     <span class="icon- github">&#xeab1;</span>
                   </a>
                 </div>
@@ -51,14 +57,14 @@
               <div class="speakers">
                 {{talk.speakers}}
               </div>
-              
+
             </div>
-            {% endif %} 
+            {% endif %}
           {% endfor%}
           </div>
         </section>
       </article>
-      {% endfor %}      
+      {% endfor %}
 
     </main>
     {% include footer.html %}
