@@ -2,9 +2,9 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width,initial-scale=1.0" id="vp" name="viewport">
   <title>
+    {{ site.name }} |
     {% if page.category %} {{ page.category | capitalize }} | {% endif %}
-    {% if page.title %} {{ page.title }} | {% endif %}
-    {{ site.name }}
+    {% if page.title %} {{ page.title |  markdownify | strip_html }} {% endif %}
   </title>
 
    <!-- fonts -->
