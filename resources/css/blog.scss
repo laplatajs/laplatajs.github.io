@@ -53,7 +53,7 @@ article.wide {
     }
 }
 
-.meetup {
+.blog {
     &.wrapper {
         text-align: left;
     }
@@ -72,46 +72,6 @@ article.wide {
         }
 
     }
-    .date {
-        font-weight: 300;
-    }
-    .location {
-        font-weight: 600;
-    }
-    .speakers {
-        display: inline;
-    }
-    .repo {
-        display: inline;
-        a,
-        a:hover,
-        a:visited {
-          color: #999;
-          text-decoration: none;
-        }
 
-        .icon- {
-            color: $green-color;
-            font-size: 24px;
-            @include mobile {
-                font-size: 20px;
-            }
-        }
-    }
-
-}
-
-.talk {
-    padding-left: 50px;
-    .title {
-        font-size: 32px;
-        @include mobile {
-            font-size: 24px;
-        }
-    }
-    .speakers {
-        font-weight: 300;
-        text-transform: uppercase;
-    }
 }
 
