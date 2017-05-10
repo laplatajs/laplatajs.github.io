@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html section="blog" %}
+
+<body>
+
+  <main role="main" class="page-content blog">
+    {% include navigation.html %}
+
+    <article class="header">
+      <section class="wrapper">
+        {{ content }}
+      </section>
+    </article>
+
+    {% for post in site.categories.blog %}
+    <article class="wide">
+      <section class="wrapper blog">
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | markdownify }}</a>
+        </h2>
+        <p>
+          {{ post.excerpt }}
+          <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
+        </p>
+      </section>
+    </article>
+    {% endfor %}
+
+  </main>
+  {% include footer.html %}
+</body>
+
+</html>

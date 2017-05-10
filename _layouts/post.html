@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html section="blog" %}
+
+<body>
+
+  <main role="main" class="page-content blog">
+    {% include navigation.html %}
+
+    <article class="header">
+      <section class="wrapper">
+        <h1>
+          {{ page.title | markdownify }}
+        </h1>
+      </section>
+    </article>
+  <article class="wide">
+      <section class="wrapper blog">
+          {{ content }}
+      </section>    
+  </main>
+  {% include footer.html %}
+</body>
+
+</html>
