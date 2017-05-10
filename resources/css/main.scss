@@ -67,7 +67,8 @@
         background: rgba(0,0,0, .4);
         text-shadow: 0px 1px 8px rgba(0, 0, 0, 1);
         font-weight: 300;
-        padding: 30px 30px 75px;
+        padding: 30px;
+        margin-bottom: 55px;
 
         @include mobile {
             font-size: 20px;
