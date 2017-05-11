@@ -14,54 +14,7 @@
         </section>
       </article>
 
-      {% for announce in site.categories.meetups%}
-      {% if announce.current == true %}
-      <article class="cols announcement">
-        <div class="wrapper">
-
-          <section>
-            <div class="title">
-              <span class="icon- bell">&#xe601;</span>
-              <p> Nueva Meetup</p>
-            </div>
-            <h3> {{ announce.title | markdownify }}</h3>
-
-            <div class="content">
-              <div class="date">
-                <span>Fecha:</span> {{ announce.date | date: "%-d/%-m/%Y" }}
-              </div> -
-              <div class="where">
-                <span>Lugar:</span> {{ announce.location }}
-              </div>
-              {% assign post_date = announce.date | date: "%D" %}
-              {% for talk in site.categories.talks reversed %}
-                {% assign talk_date = talk.date | date: "%D" %}
-                {% if talk_date == post_date %}
-              <div class="talk">
-                <div class="talk-title">
-                  {{ talk.title }}
-                </div>
-
-                <div class="speakers">
-                  {{ talk.speakers }}
-                </div>
-              </div>
-                {% endif%}
-              {% endfor %}
-            </div>
-
-            {% if announce.signup %}
-            <div class="signup">
-              <a class="button" href="{{ announce.signup }}" target="_blank"> Anotate Ya! </a>
-            </div>
-            {% endif %}
-          </section>
-
-        </div>
-      </article>
-
-      {% endif %}
-      {% endfor %}
+      {% include announcement.html %}
 
       <article class="wide cols">
         <div class="wrapper">
