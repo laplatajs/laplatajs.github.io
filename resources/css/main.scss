@@ -17,8 +17,8 @@
  */
 
 .header {
-    padding-top: 50px;
-    background: url("/resources/images/lpjs-2.jpg") no-repeat center center;
+    padding: 50px 0;
+    background: url("/resources/images/lpjs-3.jpg") no-repeat center center;
     background-size: cover;
     text-align: center;
 
@@ -31,15 +31,24 @@
         }
     }
     h2 {
-        font-size: 20px; font-weight: 300; letter-spacing: 17px;
+        font-size: 20px; font-weight: 300; 
         text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
+        letter-spacing: 40px;
+        padding-left: 40px;
         @include mobile {
+            letter-spacing: 17px;
+            padding-left: 0;
             font-size: 12px;
         }
 
     }
     h1, h2 {
         margin: 0; line-height: 1; color: #fff;
+    }
+
+    .wrapper {
+        background: rgba(21, 21, 21, .75);
+        padding: 20px;
     }
 
     .logo {
@@ -64,11 +73,11 @@
         color: #FFF;
         text-align: center;
         font-size: 40px;
-        background: rgba(0,0,0, .4);
+        //background: rgba(0,0,0, .4);
         text-shadow: 0px 1px 8px rgba(0, 0, 0, 1);
         font-weight: 300;
         padding: 30px;
-        margin-bottom: 55px;
+        // margin-bottom: 55px;
 
         @include mobile {
             font-size: 20px;
@@ -188,5 +197,6 @@ section {
         margin: 40px 0px;
         padding-left: 20px;
         padding-right: 20px;
+        font-size: 20px;
     }
 }
