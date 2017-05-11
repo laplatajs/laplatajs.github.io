@@ -27,9 +27,9 @@ nav ul {
 
 nav li {
   display: inline-block;
-  padding-bottom: 5px;
+  // padding-bottom: 5px;
   padding-right: 20px;
-  font-size: 16px;
+  font-size: 18px;
   vertical-align: middle;
 
   &:last-child {
@@ -41,7 +41,7 @@ nav .first {
   padding-left: 0;
   text-transform: none;
   font-size: 16px;
-  padding-bottom: 5px;
+  // padding-bottom: 5px;
   padding-right: 5px;
   text-align: center;
 }
