@@ -1,0 +1,45 @@
+{% assign announcement = site.data.announcement %}
+{% if announcement %}
+<article class="cols announcement" id="announcement"  style="display: none;">
+  <div class="wrapper">
+
+    <section>
+      <div class="top">
+        <span class="icon- bell">&#xe601;</span> Nueva Meetup
+      </div> 
+      <div class="title">
+        {{ announcement.title | markdownify }}
+      </div>
+      <div class="content">
+        <div class="date">
+          {{ announcement.date | date: "%-d/%-m/%Y" }}
+        </div>
+        <div class="where">
+          <span class="icon- bell">&#xe947;</span> {{ announcement.location }}
+        </div>
+        {% assign post_date = announcement.date | date: "%D" %}
+      </div>
+      {% if announcement.flyer %}
+      <div class="flyer">
+        <img src="resources/images/flyers/{{ announcement.flyer}}" width="100%" />
+      </div>
+      {% endif %}
+      {% if announcement.signup %}
+      <div class="signup">
+        <a class="button" href="{{ announcement.signup }}" target="_blank"> Anotate Ya! </a>
+      </div>
+      {% endif %}
+    </section>
+
+  </div>
+</article>
+<script>
+  (function() {
+    var meetup = new Date("{{ announcement.date }}").getTime();
+    var now = new Date().getTime();
+    if (now < meetup) {
+      document.getElementById('announcement').style.display = "block";
+    }
+  })();
+</script>
+{% endif %}
