@@ -1,8 +1,8 @@
-<meta property=“og:url” content={{page.url | prepend: site.baseurl}}>
-<meta property=“og:title” content=“{{ site.name }} |
+<meta property="og:url" content="{{page.url | prepend: site.baseurl}}">
+<meta property="og:title" content="{{ site.name }} |
     {% if page.category %} {{ page.category | capitalize }} | {% endif %}
-    {% if page.title %} {{ page.title |  markdownify | strip_html }} {% endif %}”>
+    {% if page.title %} {{ page.title |  markdownify | strip_html }} {% endif %}">
 {% if page.description %}    
-<meta property=“og:description” content=“{{page.description}}”>
+<meta property="og:description" content="{{page.description}}">
 {% endif %}
-<meta property=“og:image” content={{site.baseurl}}“/resources/images/avatar.jpg”>
+<meta property="og:image" content={{site.baseurl}}"/resources/images/avatar.jpg">
