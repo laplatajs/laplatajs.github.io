@@ -8,7 +8,7 @@ author:
     twitter: elmasse
 ---
 
-Hace unas semanas arranque un proyecto nuevo. Decidí darle una oportunidad a tener **peerDependencies**. Ya lo había hecho antes y no funcionó. Pero esta vez me puse a investigar un poco más. Este post viene a cubrir un poco lo que hice a modo de “notas” para mi pero tambien puede que le sirva a alguien más.
+Hace unas semanas arranque un proyecto nuevo. Decidí darle una oportunidad a tener **peerDependencies**. Ya lo había hecho antes y no funcionó. Pero esta vez me puse a investigar un poco más. Este post viene a cubrir un poco lo que hice a modo de "notas" para mi pero tambien puede que le sirva a alguien más.
 
 ## Un poco de contexto
 
@@ -88,14 +88,14 @@ A partir de node 6.3 podemos pasarle un parametro a node para que preserve los s
 * Si no podemos cambiar el script de ejecución, o no depende directamente de ejecutar el código con el CLI de node esta solución no nos sirve.
 
 ### Instalar las peerDependencies en mi-lib
-En este caso, que parece ser el más “future proof”, vamos instalar _la misma version de las peerDependencies_ que usamos en `mi-host`. Esto es, si por ejemplo, nuestro `package.json` contiene:
+En este caso, que parece ser el más "future proof", vamos instalar _la misma version de las peerDependencies_ que usamos en `mi-host`. Esto es, si por ejemplo, nuestro `package.json` contiene:
 
 ```json
 {
-  “name”: `mi-lib`,
+  "name": "mi-lib",
 
-  “peerDependencies”: {
-      “react”: “^15.6”
+  "peerDependencies": {
+      "react": "^15.6"
   }
 }
 ```
@@ -121,7 +121,7 @@ Con esto nos aseguramos que el node_modules de nuestro `mi-lib` contenga exactam
 ### Monorepos (lerna)
 Si no están familiarizados con [lerna](https://lernajs.io) (o monorepos) la idea es que nos permite tener muchos módulos en desarrollo bajo el mismo repositorio. Lerna se encarga de hacer el trabajo de `npm link`. No hay symlinks. Las dependencias la maneja lerna y hace el desarrollo más sencillo.
 
-Para solucionar el problema anterior lerna nos provee de una solución interesante. Tiene una funcionalidad que nos permite “hoistear” dependencias. Esto es, usar un node_modules en común en un nivel superior.
+Para solucionar el problema anterior lerna nos provee de una solución interesante. Tiene una funcionalidad que nos permite "hoistear" dependencias. Esto es, usar un node_modules en común en un nivel superior.
 
 Un repositorio con lerna tiene una estructura similar a esta:,
 
@@ -162,7 +162,7 @@ O bien lo agregamos como parte de la configuración en el lerna.json
 
 #### Cons
 
-* Todo el repositorio depende del formato de lerna. Y nuestro código queda enterrado en un directorio “packages” haciendo el repositorio un poco más grande de lo necesario.
+* Todo el repositorio depende del formato de lerna. Y nuestro código queda enterrado en un directorio "packages" haciendo el repositorio un poco más grande de lo necesario.
 
 
 ## Resumiendo
