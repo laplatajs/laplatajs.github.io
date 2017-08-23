@@ -51,6 +51,22 @@ article.wide {
     &:last-child {
         padding-bottom: 50px;
     }
+
+    p {
+        font-size: 1.2em;
+        color: #424242;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.8em;
+        font-weight: 200;
+    }
+    h4 {
+        font-size: 1.5em;
+    }
 }
 
 .blog {
@@ -70,8 +86,10 @@ article.wide {
         @include mobile {
             font-size: 24px;
         }
-
     }
-
+    .date {
+        border-bottom: 1px solid #eee;
+        margin-bottom: 40px;
+    }
 }
 
