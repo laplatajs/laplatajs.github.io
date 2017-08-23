@@ -13,10 +13,16 @@
         <h1>
           {{ page.title | markdownify }}
         </h1>
+        <div>{% if page.author %}</div>
+        <div><img src="https://avatars.githubusercontent.com/{{page.author.github}}" height="40px" /></div>
+        <div>{{ page.author.name }}</div>
+        {% endif %}
+        </p>        
       </section>
     </article>
-  <article class="wide">
+  <article class="wide">    
       <section class="wrapper blog">
+          <div class="date">{{ page.date | date: "%B %-d %Y" }}</div>
           {{ content }}
       </section>    
   </main>
