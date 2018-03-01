@@ -24,7 +24,7 @@ A mi me gusta explicarlo de la siguiente manera:
 
 Ahora, ¿en qué parte de toda esta historia entran las extensiones nativas? Voy a elegir escritura/lectura a disco como ejemplo. Ni JavaScript ni V8 nos proveen acceso a disco. Libuv solo nos da asincronismo. Pero con node.js podemos hacerlo, ¿cierto? Este es el punto donde las extensiones nativas entran en juego. El módulo `fs` está implementado usando C++ (que si cuenta con acceso a disco) y eventualmente expone métodos (entre ellos, writeFile y readFile) los cuales son invocados desde JavaScript.
 
-![Relacion entre JS, extensiones nativas y libuv](/resources/blog/js-native-libuv.svg "Relacion entre JS, extensiones nativas y libuv")
+![Relacion entre JS, extensiones nativas y libuv](/resources/blog/js-native-libuv.svg)
 
 Habiendo aclarado esto, podemos empezar a dar nuestros primeros pasos con una extensión nativa. Veamos las herramientas que necesitamos.
 
@@ -62,11 +62,15 @@ Este es un módulo node.js que provee una implementación en C++ de N-API, lo qu
 
 Para iniciarnos en el mundo de las extensiones nativas, vamos hacer el clásico ejemplo de hello world. La idea de esto es no cargar el ejemplo de lógica extra y solo mostrar el mínimo código indispensable que necesitamos para conseguir un primer “pantallazo” de cómo sería implementar una extensión nativa. Comenzamos iniciando npm para poder instalar las dependencias necesarias del proyecto:
 
-`npm init`
+```bash
+npm init
+```
 
 Luego, necesitamos instalar node-addon-api y bindings:
 
-`npm i node-addon-api bindings`
+```bash
+npm i node-addon-api bindings
+```
 
 Ahora necesitamos crear el archivo que va a contener nuestro [código C++](https://gist.github.com/betomoretti/90788e123bf8a55118bebddac5024fda#file-hello_world-cc). 
 
@@ -82,7 +86,7 @@ Finalmente, el [archivo JavaScript](https://gist.github.com/betomoretti/90788e12
 
 Ahora debemos compilar nuestra extensión ejecutando npm install y ejecutar el archivo que la usa.
 
-![Compilar y ejecutar extension nativa demo]("url-de-imagen","texto?")
+![Compilar y ejecutar extension nativa demo](/resources/blog/hello-world.gif)
 
 ### ¿Qué había antes de N-API?
 
@@ -105,4 +109,4 @@ Saber que NAN existe nos permite utilizar sus ejemplos y documentación para seg
 
 Aprender acerca de extensiones nativas me ayudó a entender cómo funciona node.js y cómo está compuesto. Hay más de un caso de uso para esto, desde mejoras de performance, integraciones con librerías implementadas en C/C++ hasta incluso soporte para código _legacy_. En resumen, es una excelente forma de conocer más sobre los _internals_ de node.js.
 
-¡Los invito a involucrarse! Cualquier consulta pueden preguntar en el slack de [LaPlataJS](http://laplatajs.slack.com/) ([slackin](http://laplatajs.herokuapp.com/)). Eso es todo y hasta el próximo artículo. :wave:
+¡Los invito a involucrarse! Cualquier consulta pueden preguntar en el slack de [LaPlataJS](http://laplatajs.slack.com/) ([slackin](http://laplatajs.herokuapp.com/)). Eso es todo y hasta el próximo artículo.
