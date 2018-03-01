@@ -1,5 +1,5 @@
 ---
-title: Extensiones Nativas: ¿Dónde empezar? 
+title: 'Extensiones Nativas: ¿Dónde empezar?'
 category: blog
 layout: post
 author:
