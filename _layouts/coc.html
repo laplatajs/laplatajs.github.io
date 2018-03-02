@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html section="coc" %}
+
+  <body>
+
+    <main role="main" class="page-content coc">
+      {% include navigation.html %}
+
+      <article class="header">
+        <section class="wrapper">
+          {{ content }}
+        </section>
+      </article>
+
+      {% for post in site.categories.coc %}
+      <article class="wide">
+        <section class="wrapper coc">
+          <div class="content">
+          {{post.content}}
+          </div>
+        </section>
+      </article>
+      {% endfor %}
+
+    </main>
+    {% include footer.html %}
+  </body>
+
+</html>
