@@ -14,7 +14,10 @@
       </li>
       <li class="{% if page.url contains  '/blog' %} current {%endif%}">
         <a href="/blog">Blog <span class="badge">{{ site.categories.blog.size }}</span></a>
-      </li>      
+      </li>
+      <li class="{% if page.url contains  '/coc' %} current {%endif%}">
+        <a href="/coc">CoC</a>
+      </li>
       <li>
         <a href="mailto:{{site.email}}">Contacto</a>
       </li>
