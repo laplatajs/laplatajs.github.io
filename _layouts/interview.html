@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html section="interview" %}
+
+<body>
+
+  <main role="main" class="page-content blog">
+    {% include navigation.html %}
+
+    <article class="header">
+      <section class="wrapper">
+        {{ content }}
+      </section>
+    </article>
+
+    {% for post in site.categories.interview %}
+    <article class="wide">
+      <section class="wrapper blog">
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | markdownify }}</a>
+        </h2>
+        <p>
+        {% if post.author %}
+        <img src="https://avatars.githubusercontent.com/{{post.author.github}}" height="40px" />
+        <span>{{ post.author.name }}</span>
+         -
+        {% endif %}
+        {{ post.date | date: "%B %-d %Y" }}
+        </p>
+        <p>
+          {{ post.excerpt }}
+          <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">Seguir leyendo...</a>
+        </p>
+      </section>
+    </article>
+    {% endfor %}
+
+  </main>
+  {% include footer.html %}
+</body>
+
+</html>
