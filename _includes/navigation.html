@@ -1,4 +1,3 @@
-
 <nav>
   <div class="wrapper">
     <ul class="first">
@@ -15,27 +14,15 @@
       <li class="{% if page.url contains  '/blog' %} current {%endif%}">
         <a href="/blog">Blog <span class="badge">{{ site.categories.blog.size }}</span></a>
       </li>
+      <li class="{% if page.url contains  '/interview' %} current {%endif%}">
+        <a href="/blog">Entrevistas <span class="badge">{{ site.categories.interview.size }}</span></a>
+      </li>
       <li class="{% if page.url contains  '/coc' %} current {%endif%}">
         <a href="/coc">CoC</a>
       </li>
       <li>
         <a href="mailto:{{site.email}}">Contacto</a>
       </li>
-
-<!-- 
-      <li class="{% if page.url contains  '/blog' %} current {%endif%}">
-        <a href="/blog">Noticias</a>
-      </li>
-      <li class="{% if page.url contains  '/blog' %} current {%endif%}">
-        <a href="/blog">Participa</a>
-      </li>
-      <li class="{% if page.url contains  '/blog' %} current {%endif%}">
-        <a href="/blog">Sponsors</a>
-      </li>
-      <li class="{% if page.url contains  '/staff' %} current {%endif%}">
-        <a href="/staff">Staff</a>
-      </li>
- -->
     </ul>
   </div>
 </nav>
