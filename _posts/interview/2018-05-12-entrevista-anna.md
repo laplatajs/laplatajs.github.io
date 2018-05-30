@@ -9,7 +9,7 @@ author:
 ---
 
 
-> ¡Bienvenidxs queridxs lectores! En esta oportunidad LaPlataJS inaugura su sección de entrevistas.  
+> ¡Bienvenidxs queridxs lectorxs! En esta oportunidad LaPlataJS inaugura su sección de entrevistas.  
 La idea de estas entrevistas es que la comunidad latina tenga la oportunidad de conocer a aquellxs que estan __pusheando__ JS hacia adelante.  
 Para nuestra primer entrevista, vamos a concentrarnos en el core de Node.js y todo lo que esta ocurriendo alrededor del nuevo soporte a N-API (que paso a tener estado estable en la flamante versión de Node.js v10).  
 Y para lograr comprender de primera mano lo que esta sucediendo en el core de Node.js, decidimos consultar a una de las desarrolladoras que mas lo conoce, con ustedes, Anna, aka @addaleax. 
