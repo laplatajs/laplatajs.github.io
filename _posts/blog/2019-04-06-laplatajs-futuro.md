@@ -8,7 +8,8 @@ author:
     twitter: carax
 ---
 
-> LaPlataJS surge en 2014 con la idea de crear una comunidad donde tengamos espacio para charlar sobre JavaScript (JS). Si recordamos un poco el contexto historico, JS estaba explotando ese año. Y no paro de crecer desde ese momento. Volviendo a nuestro inicio; este articulo es sobre todo lo que pasó y va a pasar, vamos a conocer todo lo que hay entre las palabras de esa primer línea. ¿Cómo empezó todo? ¿Qué entendemos por comunidad? ¿Qué paso del 2014 hasta la actualidad y qué es lo que se viene?
+LaPlataJS surge en 2014 con la idea de crear una comunidad donde tengamos espacio para charlar sobre JavaScript (JS). Este articulo es sobre todo lo que pasó y va a pasar. Vamos a conocer todo lo que hay entre las palabras de esa primer línea. ¿Cómo empezó todo? ¿Qué entendemos por comunidad? ¿Qué paso del 2014 hasta la actualidad y qué es lo que se viene?
+
 
 ## Orígenes
 
